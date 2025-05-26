@@ -1,0 +1,27 @@
+This is the class which has List Interface implementation
+🔍 2. LinkedList — Additional Methods
+Because it also implements Deque and Queue, it adds many more methods.
+
+Additional Queue/Deque Methods:
+Method	Description
+addFirst(E e)	Adds at front
+addLast(E e)	Adds at end
+getFirst()	Returns first element (or throws)
+getLast()	Returns last element (or throws)
+removeFirst()	Removes first
+removeLast()	Removes last
+offerFirst(E e)	Adds at front (returns boolean)
+offerLast(E e)	Adds at end (returns boolean)
+peekFirst()	Returns first (null if empty)
+peekLast()	Returns last (null if empty)
+pollFirst()	Removes first (null if empty)
+pollLast()	Removes last (null if empty)
+push(E e)	Stack-style push (addFirst)
+pop()	Stack-style pop (removeFirst)
+
+
+LinkedList<String> list = new LinkedList<>();
+list.addFirst("A");
+list.addLast("B");
+System.out.println(list.getFirst()); // A
+System.out.println(list.getLast());  // B
