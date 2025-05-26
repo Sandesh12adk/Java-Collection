@@ -1,0 +1,77 @@
+ Here are the most common Java classes that implement the Queue interface, along with their key features and typical use cases:
+
+Common Queue Implementations in Java
+1. LinkedList
+Implements: Queue, Deque, List
+Type: Doubly linked list
+Supports all queue operations + deque (double-ended queue) operations
+Order: FIFO (First-In-First-Out) for queue methods
+
+Use case: General-purpose queue, also supports stack and deque operations
+
+
+Queue<String> queue = new LinkedList<>();
+queue.add("A");
+queue.offer("B");
+System.out.println(queue.poll()); // Outputs "A"
+
+
+2. ArrayDeque
+Implements: Deque, Queue
+Type: Resizable array-based deque
+Faster than LinkedList for most queue/deque operations (no node allocations)
+Use case: High-performance queue and deque
+Does not allow capacity restrictions (no blocking or bounded behavior)
+
+Queue<String> queue = new ArrayDeque<>();
+queue.offer("X");
+queue.offer("Y");
+System.out.println(queue.poll()); // Outputs "X"
+
+
+3. PriorityQueue
+Implements: Queue
+Type: Heap-based priority queue
+Order: Elements are ordered based on natural ordering or provided Comparator
+Use case: When you want a queue that dequeues the smallest or highest priority element first (not FIFO)
+
+
+
+Queue<Integer> pq = new PriorityQueue<>();
+pq.offer(20);
+pq.offer(10);
+pq.offer(15);
+System.out.println(pq.poll()); // Outputs 10 (smallest element)
+
+
+4. ConcurrentLinkedQueue
+Implements: Queue
+Type: Lock-free, thread-safe queue
+Order: FIFO
+Use case: High-performance, non-blocking concurrent queue for multi-threading
+
+
+Queue<String> concurrentQueue = new ConcurrentLinkedQueue<>();
+concurrentQueue.offer("thread-safe");
+
+
+
+5. LinkedBlockingQueue (from java.util.concurrent)
+Implements: BlockingQueue, Queue
+Type: Thread-safe, optionally bounded blocking queue
+Use case: Producer-consumer pattern, thread communication with blocking
+
+BlockingQueue<String> blockingQueue = new LinkedBlockingQueue<>(100);
+blockingQueue.put("data");  // blocks if full
+blockingQueue.take();       // blocks if empty
+
+
+
+Summary Table
+Class	Thread-Safe?	Blocking?	Ordering	Use Case
+LinkedList	No	No	FIFO	General-purpose queue & deque
+ArrayDeque	No	No	FIFO	Fast, general queue & deque
+PriorityQueue	No	No	Priority-based (not FIFO)	Priority ordering queue
+ConcurrentLinkedQueue	Yes	No	FIFO	High-performance concurrent queue
+LinkedBlockingQueue	Yes	Yes	FIFO	Thread-safe blocking queue (producer-consumer)
+
