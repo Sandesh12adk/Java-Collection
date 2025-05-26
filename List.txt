@@ -1,0 +1,21 @@
+Methods added specifically by List interface:
+
+
+Method Signature	                        Description
+1.void add(int index, E element)	        Insert element at specific index
+
+2.E get(int index)	                        Get element at index
+
+3.E set(int index, E element)	                Replace element at index
+
+4.E remove(int index)	                        Remove element at index
+
+5.int indexOf(Object o)	                        Find first index of element
+
+6.int lastIndexOf(Object o)	                Find last index of element
+
+7.ListIterator<E> listIterator()	        List-specific iterator
+
+8.ListIterator<E> listIterator(int index)	List iterator starting at index
+
+9.List<E> subList(int fromIndex, int toIndex)	View of sublist
