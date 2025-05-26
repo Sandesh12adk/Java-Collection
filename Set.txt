@@ -1,0 +1,29 @@
+✅ Answer:
+Actually, Set adds no new methods of its own.
+
+📌 Explanation:
+Set is a subinterface of Collection, and it does not declare any new methods.
+
+It inherits all of its methods from Collection.
+
+The key difference is in the behavior:
+
+Set does not allow duplicate elements.
+
+Method implementations (like add, equals, hashCode, etc.) are expected to enforce that set elements are unique.
+
+
+This is the internal Implementation
+
+public class Set<E> implements Collection<E> {
+    private List<E> data = new ArrayList<>();
+
+    @Override
+    public boolean add(E e) {
+        if (!data.contains(e)) {
+            data.add(e);
+            return true;
+        }
+        return false; // duplicate
+    }
+}
