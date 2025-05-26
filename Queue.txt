@@ -1,0 +1,10 @@
+| Method      | What it does                        | Throws Exception if queue is empty/full |
+| ----------- | ----------------------------------- | --------------------------------------- |
+| offer(e)  | Add to queue (return false if full) | ❌ No (returns `false`)                  |
+| remove()  | Remove and return head              | ✅ Yes (`NoSuchElementException`)        |
+| poll()    | Remove and return head              | ❌ No (returns `null`)                   |
+| element() | Return head without removing        | ✅ Yes (`NoSuchElementException`)        |
+| peek()    | Return head without removing        | ❌ No (returns `null`)                   |
+
+
+Note: Methods like add and more are already in collection interface. Queue has their implementation done following the principal of queque i.e first in first out
