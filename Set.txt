@@ -27,3 +27,9 @@ public class Set<E> implements Collection<E> {
         return false; // duplicate
     }
 }
+
+| Static Method            | Description                                            |
+| ------------------------ | ------------------------------------------------------ |
+| `Set.of(...)`            | Creates an **immutable** set with the given elements   |
+| `Set.copyOf(Collection)` | Creates an **unmodifiable copy** of another collection |
+
