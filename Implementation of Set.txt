@@ -1,0 +1,6 @@
+| Implementation  | Order Preserved?   | Sorted? | Performance (add/remove/contains)   | Use Case                             |
+| --------------- | ------------------ | ------- | ----------------------------------- | ------------------------------------ |
+| `HashSet`       | No                 | No      | O(1)                                | Fast unique collection               |
+| `LinkedHashSet` | Yes (insertion)    | No      | O(1) (slightly slower than HashSet) | Unique + predictable iteration order |
+| `TreeSet`       | Sorted             | Yes     | O(log n)                            | Sorted set                           |
+| `EnumSet`       | Yes (enum natural) | Yes     | Extremely fast                      | Sets of enum constants               |
