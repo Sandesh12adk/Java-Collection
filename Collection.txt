@@ -1,0 +1,16 @@
+| Method           | What it does                     |
+| ---------------- | -------------------------------- |
+| size()         | How many items?                  |
+| isEmpty()      | Is it empty?                     |
+| contains(x)    | Does it have x?                  |
+| add(x)         | Add x                            |
+| remove(x)      | Remove x                         |
+| clear()        | Remove everything                |
+| iterator()     | Used for looping                 |
+| toArray()      | Get items as array               |
+| addAll(c)      | Add everything from c            |
+| removeIf(f)    | Remove items that match a rule   |
+| retainAll(c)   | Keep only shared items with c    |
+| removeAll(c)   | Remove all items from c          |
+| containsAll(c) | Do I have everything in c?       |
+| spliterator()  | Used for parallel stream looping |
