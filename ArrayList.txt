@@ -1,0 +1,13 @@
+This is the Class implementation the List interface 
+
+👉 Unique to ArrayList:
+
+ensureCapacity()
+trimToSize()
+clone()
+
+
+
+ArrayList<String> list = new ArrayList<>();
+list.ensureCapacity(100); // Avoids internal resizing
+list.trimToSize();        // Shrinks capacity to current size
