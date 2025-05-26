@@ -1,0 +1,43 @@
+Iterable
+
+1. Iterator<T> iterator()
+
+The for-each loop internally uses this method to iterate.
+
+
+
+Iterable<String> names = List.of("Ram", "Shyam", "Hari");
+
+for (String name : names) {
+
+    System.out.println(name); // for-each uses iterator() behind the scenes
+
+}
+
+
+
+2. default void forEach(Consumer<? super T> action)
+
+🔹 Purpose:
+Executes a lambda function or action for each element.
+
+🔹 Usage:
+
+List<String> names = List.of("Ram", "Shyam", "Hari"); 
+
+names.forEach(name -> System.out.println(name));
+
+🔹 Note:
+This is a default method, added in Java 8.
+
+3. default Spliterator<T> spliterator()
+
+🔹 Purpose:
+Used for parallel iteration (e.g., streams or multi-threaded traversal).
+
+🔹 Usage:
+
+Spliterator<String> spliterator = names.spliterator(); spliterator.forEachRemaining(System.out::println);
+
+🔹 Advanced use:
+Used with the Stream API for parallel processing. Rarely used directly by beginners.
