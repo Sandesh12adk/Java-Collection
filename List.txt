@@ -19,3 +19,9 @@ Method Signature	                        Description
 8.ListIterator<E> listIterator(int index)	List iterator starting at index
 
 9.List<E> subList(int fromIndex, int toIndex)	View of sublist
+
+
+| Static Method             | Description                                                |
+| ------------------------- | ---------------------------------------------------------- |
+| `List.of(...)`            | Creates an **immutable** list with given elements          |
+| `List.copyOf(Collection)` | Creates an **unmodifiable copy** of an existing collection |
